@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#03060e" />
+  <meta name="description" content="Orbit Atlas — a cinematic, interactive journey through eight beautifully rendered worlds." />
+  <title>Orbit Atlas — An Interactive Journey</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="textures-embedded.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="stars stars--back" aria-hidden="true"></div>
+  <div class="stars stars--front" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <div class="app" id="top">
+
+    <main>
+      <section class="experience" id="experience" aria-label="Explore the planets">
+        <div class="scene" id="scene" aria-label="Interactive planet carousel">
+          <div class="scene-halo" aria-hidden="true"></div>
+          <div class="orbit-path orbit-path--wide" aria-hidden="true"></div>
+          <div class="orbit-path orbit-path--inner" aria-hidden="true"></div>
+          <div class="light-arc light-arc--one" aria-hidden="true"></div>
+          <div class="light-arc light-arc--two" aria-hidden="true"></div>
+          <div class="planet-track" id="planet-track"></div>
+          <div class="transition-beam" aria-hidden="true"></div>
+        </div>
+
+        <div class="planet-copy" id="planet-copy" aria-live="polite" aria-atomic="true">
+          <h1 id="planet-name">EARTH</h1>
+          <p id="planet-description">Our beautiful blue home, suspended in the dark.</p>
+        </div>
+
+        <div class="experience-controls">
+          <button id="previous" class="arrow-button" type="button" aria-label="Previous planet"><span aria-hidden="true">←</span></button>
+          <div class="planet-insight" id="planet-insight" aria-live="polite" aria-atomic="true">
+            <span class="insight-rule" aria-hidden="true"></span>
+            <p id="insight-description">Oceans, continents, and a protective atmosphere make this the only known world to harbor life.</p>
+          </div>
+          <button id="next" class="arrow-button" type="button" aria-label="Next planet"><span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <nav class="planet-nav" id="planet-nav" aria-label="Choose a planet"></nav>
+    </main>
+  </div>
+  <noscript><p class="noscript">JavaScript must be enabled to explore the planets.</p></noscript>
+</body>
+</html>
